@@ -1,0 +1,247 @@
+Semilampo a squadre del FVG e Veneto Orientale 10a edizione
+Cordenons
+ITA
+10-10-2009;
+Eugenio Cervesato
+2     // tournament type (0=swiss Dutch, 1=swiss Dubov, 2=Swiss Simple, 3=swiss Perfect Colours, 4=Amalfi Rating, 5=round robin, 6=by hand)
+1     // tournament pairing (1=regular, 2=allow return, 3=absolutely free)
+6     // Rounds 
+1     // Team order criteria (1=Elo, 2= random, 3=alphabetical, 4=as entered)
+4     // max boards to play
+6     // max Players per Team
+123460     // string with tie break criteria
+10     // total Teams entered
+6     // total rounds yet generated
+6     // sort index of the following Team
+TEGLIO VENETO
+4     // Number of Players
+PILLON Giovanni;PN_--;;m;F;0;;303472;1554;30;
+ZUCCHETTO Pierpaolo;PN_1N;290659;m;E;6024;;112332;1742;30;
+ZUCCHETTO Egidio;PN_--;170363;m;F;6024;;114561;1533;30;
+BELLOTTO SIMONE;PN;211193;m;NC;;;131845;1455;30;
+4     // sort index of the following Team
+PORDENONE SCACCHI
+4     // Number of Players
+GAVRIL Daniel;PN_--;040169;m;C;6024;;125538;2098;30;
+LA MALFA Stelio;PN_1N;051261;m;E;6024;;106533;1671;30;
+MICHIELIN Sergio;PN_--;;m;F;0;;303235;1578;30;
+KINA Milto;PN_--;180258;m;F;6024;;128159;1506;30;
+9     // sort index of the following Team
+MANIAGO U16
+4     // Number of Players
+CAVICCHIA Angelo;PN_3N;140596;m;F;6029;;125974;1554;30;
+BOZZA Stefano;PN_2N;200795;m;F;6024;;125539;1470;30;
+CELLINI Riccardo;PN;140398;m;NC;0;;139562;1452;30;
+MONGIAT LUCA;PN;230497;m;NC;;;139561;1503;30;
+7     // sort index of the following Team
+MANIAGO
+4     // Number of Players
+DEL TIN Alberto;PN_2N;250456;m;E;6029;;102023;1634;30;
+BONAZZA Alessandro;PN_3N;280263;m;E;6029;;102011;1602;30;
+FLOREAN GIANLUCA;PN_--;120165;m;0;6029;;118887;1480;30;
+CUSAN Norgino;PN_NC;020440;m;F;6029;;110283;1431;30;
+5     // sort index of the following Team
+CORDENONS
+4     // Number of Players
+GUIDI Giacomo;PN_1N;071191;m;E;6022;;127203;1557;30;
+MILAZZO Mario;VE_CM;130952;m;C;20017;;128875;2014;30;
+CASONATO Stefano;PN_2N;110690;m;E;6022;;120808;1611;30;
+BATTISTON Edoardo;PN_2N;131189;m;F;6022;;114870;1587;30;
+10     // sort index of the following Team
+CORDENONS U10
+4     // Number of Players
+CERVESATO ALESSIO;PN;030900;m;NC;;;135369;1554;30;
+DAMJANOVIC PETAR;PN;020300;m;NC;;;135372;1413;30;
+SPAGNUOLO DIEGO;PN;140500;m;NC;;;135373;1374;30;
+CHIARELLO FRANCESCO;PN_--;040200;m;0;6022;;140084;1440;30;
+1     // sort index of the following Team
+LARSEN MONSELICE
+4     // Number of Players
+GROMOVS Sergejs;PD_FM;151265;m;A;20005;;121317;2443;20;
+CAPUANO Eugenio;CB;280976;m;FM;804452;;103905;2285;0;
+REDO Nicola;VE_-M;200572;m;B;20017;;105031;2274;20;
+SGARAVATTI Francesco;PD_-M;180157;m;C;20005;;103234;2048;30;
+2     // sort index of the following Team
+ARZIGNANO
+4     // Number of Players
+LUCIANI Valerio;PD_FM;031273;m;B;20006;;101361;2245;20;
+GUERRA Alessandro;VI;230670;m;-M;801615;;106580;2202;0;
+SIMOLI Sergio;VI_-M;031256;m;B;20047;;106331;2251;20;
+FABRIS Alberto;VE;030463;m;-M;801348;;106578;2216;0;
+3     // sort index of the following Team
+TRIESTINA
+4     // Number of Players
+MOCCHI Tullio;TS_FM;310364;m;B;6006;;103797;2319;20;
+CHERIN Diego;TS_FM;231270;m;B;6006;;106517;2252;20;
+DE VAL Daniele;TS_-M;151175;m;B;6006;;106518;2215;20;
+BEVILACQUA Andrea;TS_CM;130586;m;C;6006;;103787;2126;30;
+8     // sort index of the following Team
+MISTA CORDENONS
+4     // Number of Players
+CERVESATO Eugenio;PN_3N;300956;m;F;6022;;105877;1533;30;
+CERVESATO Fabio;PN_3N;180787;m;E;6022;;110340;1611;30;
+TALAMINI VITTORINO;PN_--;040957;m;0;6022;;115402;1440;30;
+CAVICCHIA Silvio;PN_3N;070751;m;F;6029;;118886;1563;30;
+1     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+1-6-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+7-2-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+3-8-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+9-4-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+5-10-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+2     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+4-1-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+2-3-0.5-30.5
+1-1-0.5-0.5
+2-2-0-1
+3-3-0-1
+4-4-0-1
+6-5-0.5-30.5
+1-1-0-1
+2-2-0-1
+3-3-0.5-0.5
+4-4-0-1
+10-7-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+8-9-20.5-10.5
+1-1-0.5-0.5
+2-2-0-1
+3-3-1-0
+4-4-1-0
+3     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+1-3-3-1
+1-1-1-0
+2-2-0.5-0.5
+3-3-1-0
+4-4-0.5-0.5
+5-2-0.5-30.5
+1-1-0-1
+2-2-0-1
+3-3-0.5-0.5
+4-4-0-1
+8-4-1-3
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-1-0
+7-9-1-3
+1-1-0.5-0.5
+2-2-0-1
+3-3-0-1
+4-4-0.5-0.5
+10-6-1-3
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-1-0
+4     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+2-1-2-2
+1-1-0-1
+2-2-1-0
+3-3-1-0
+4-4-0-1
+3-5-30.5-0.5
+1-1-1-0
+2-2-0.5-0.5
+3-3-1-0
+4-4-1-0
+4-7-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+9-10-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+6-8-2-2
+1-1-0-1
+2-2-1-0
+3-3-1-0
+4-4-0-1
+5     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+1-5-3-1
+1-1-1-0
+2-2-0-1
+3-3-1-0
+4-4-1-0
+3-4-3-1
+1-1-0-1
+2-2-1-0
+3-3-1-0
+4-4-1-0
+9-2-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+7-6-1-3
+1-1-0-1
+2-2-0-1
+3-3-1-0
+4-4-0-1
+8-10-30.5-0.5
+1-1-1-0
+2-2-0.5-0.5
+3-3-1-0
+4-4-1-0
+6     // round number. follows groups of 5 lines for each match (Teams & boards pairing & results)
+1-8-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+10-3-0-4
+1-1-0-1
+2-2-0-1
+3-3-0-1
+4-4-0-1
+2-4-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+6-9-4-0
+1-1-1-0
+2-2-1-0
+3-3-1-0
+4-4-1-0
+5-7-20.5-10.5
+1-1-1-0
+2-2-1-0
+3-3-0.5-0.5
+4-4-0-1
+// for each round, floater set follows.
+upfloaters of round 1 ;|
+upfloaters of round 2 ;6;|
+upfloaters of round 3 ;2;9;|
+upfloaters of round 4 ;2;7;10;|
+upfloaters of round 5 ;5;9;7;10;|
+upfloaters of round 6 ;8;10;4;9;7;|

@@ -1,0 +1,169 @@
+CIG16 Spilimbergo
+Spilimbergo
+it
+02/02/2014;02/02/2014
+Sigana Salvatore
+0     // tournament type (0=swiss Dutch, 1=swiss Dubov, 2=Swiss Simple, 3=swiss Perfect Colours, 4=Amalfi Rating, 5=round robin, 6=by hand)
+1     // tournament pairing (1=regular, 2=allow return, 3=absolutely free)
+5     // Rounds 
+1     // Team order criteria (1=Elo, 2= random, 3=alphabetical, 4=as entered)
+1     // max boards to play
+1     // max Players per Team
+126000     // string with tie break criteria
+16     // total Teams entered
+5     // total rounds yet generated
+1     // sort index of the following Team
+CERVESATO Alessio
+1     // Number of Players
+CERVESATO Alessio;PN;030900;m;NC;0;;135369;1473;30;
+9     // sort index of the following Team
+GURNARI ROBERTO
+1     // Number of Players
+GURNARI ROBERTO;;04/01/00;M;NC;;;153518;1440;;
+13     // sort index of the following Team
+SERBAN ANGELES SAMUEL
+1     // Number of Players
+SERBAN ANGELES SAMUEL;;15/07/00;M;NC;;;157806;1440;;
+2     // sort index of the following Team
+BANJAC ADAM
+1     // Number of Players
+BANJAC ADAM;;16/11/05;M;NC;;;158544;1440;;
+14     // sort index of the following Team
+SIMONI PIETRO
+1     // Number of Players
+SIMONI PIETRO;;28/03/03;M;NC;;;157682;1440;;
+6     // sort index of the following Team
+CUCCHIARO STEFANO
+1     // Number of Players
+CUCCHIARO STEFANO;;19/06/02;M;NC;;;152206;1440;;
+12     // sort index of the following Team
+SCARINZI THOMAS
+1     // Number of Players
+SCARINZI THOMAS;;26/06/00;M;NC;;;158131;1440;;
+10     // sort index of the following Team
+NICOLETTI MATTIA
+1     // Number of Players
+NICOLETTI MATTIA;;24/01/06;M;NC;;;;1440;;
+7     // sort index of the following Team
+D'INCECCO LEONARDO
+1     // Number of Players
+D'INCECCO LEONARDO;;21/07/06;M;NC;;;162444;1440;;
+3     // sort index of the following Team
+BRECELJ JARO IVAN
+1     // Number of Players
+BRECELJ JARO IVAN;;28/01/02;M;NC;;;155466;1440;;
+4     // sort index of the following Team
+BRECELJ JASNA
+1     // Number of Players
+BRECELJ JASNA;;20/09/05;F;NC;;;162567;1440;;
+5     // sort index of the following Team
+CLOCCHIATTI LUCA
+1     // Number of Players
+CLOCCHIATTI LUCA;;28/04/04;M;NC;;;162814;1440;;
+8     // sort index of the following Team
+GUBIANI MATTEO
+1     // Number of Players
+GUBIANI MATTEO;;19/04/02;M;NC;;;159404;1440;;
+15     // sort index of the following Team
+ZORINO LEONARDO
+1     // Number of Players
+ZORINO LEONARDO;;31/05/04;M;NC;;;;1440;;
+16     // sort index of the following Team
+PIASENTIN Diego
+1     // Number of Players
+PIASENTIN Diego;PN;160198;m;NC;0;;150178;1341;30;
+11     // sort index of the following Team
+O'DONOVAN BRIAN
+1     // Number of Players
+O'DONOVAN BRIAN;;28/10/02;M;NC;;;;1440;;
+1     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-9-0-1
+1-1-0-1
+10-2-0-1
+1-1-0-1
+3-11-1-0
+1-1-1-0
+12-4-1-0
+1-1-1-0
+5-13-0-1
+1-1-0-1
+14-6-0-1
+1-1-0-1
+7-15-0-1
+1-1-0-1
+16-8-1-0
+1-1-1-0
+2     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+2-12-0-1
+1-1-0-1
+13-3-0-1
+1-1-0-1
+6-15-1-0
+1-1-1-0
+9-16-1-0
+1-1-1-0
+8-1-0-1
+1-1-0-1
+4-10-1-0
+1-1-1-0
+11-5-1-0
+1-1-1-0
+14-7-1-0
+1-1-1-0
+3     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+3-9-1-0
+1-1-1-0
+12-6-1-0
+1-1-1-0
+1-13-0.5-0.5
+1-1-0.5-0.5
+2-14-0.5-0.5
+1-1-0.5-0.5
+15-4-1-0
+1-1-1-0
+16-11-1-0
+1-1-1-0
+5-8-0-1
+1-1-0-1
+7-10-0.5-0.5
+1-1-0.5-0.5
+4     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+12-3-0-1
+1-1-0-1
+6-16-1-0
+1-1-1-0
+9-15-1-0
+1-1-1-0
+14-1-0-1
+1-1-0-1
+13-2-1-0
+1-1-1-0
+4-8-0-1
+1-1-0-1
+11-7-0.5-0.5
+1-1-0.5-0.5
+10-5-0-1
+1-1-0-1
+5     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+3-6-1-0
+1-1-1-0
+9-12-1-0
+1-1-1-0
+15-1-0-1
+1-1-0-1
+8-13-0-1
+1-1-0-1
+16-14-0.5-0.5
+1-1-0.5-0.5
+2-4-1-0
+1-1-1-0
+10-11-0-1
+1-1-0-1
+5-7-0.5-0.5
+1-1-0.5-0.5
+// for each round, floater set follows.
+upfloaters of round 1 ;|downfloaters of round 1 ;
+upfloaters of round 2 ;|downfloaters of round 2 ;
+upfloaters of round 3 ;|downfloaters of round 3 ;
+upfloaters of round 4 ;7;5;|downfloaters of round 4 ;11;10;
+upfloaters of round 5 ;6;15;8;14;4;10;|downfloaters of round 5 ;3;1;13;16;2;11;

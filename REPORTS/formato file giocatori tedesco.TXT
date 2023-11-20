@@ -1,0 +1,54 @@
+Landesverband: 0 - Deutscher Schachbund e.V.
+
+DWZ-Datenbank vom 18.01.2010 - 95375 Spieler in 2614 Vereinen
+
+===========================================================================
+Eine Ver”ffentlichung dieser Daten ist nur nach vorheriger Abspache mit dem
+zust„ndigen DWZ-Referenten erlaubt!
+===========================================================================
+
+Dateistruktur: (ASCII-Dateien, die Felder sind durch "|" getrennt.)
+
+SPIELER.TXT - sortiert nach DWZ
+-----------
+ 1- ZPS-Nummer des Vereins
+ 2- Mitgliedsnummer im Verein
+ 3- Status der Mitgliedschaft
+    P - Passiv
+    D - Damengastspielgenehmigung
+    J - Jugendgastspielgenehmigung
+    V - Vorl„ufige Spielgenehmigung
+    N - Neu
+ 4- Name,Vorname
+ 5- Geschlecht
+    M - M„nnlich
+    W - Weiblich
+ 6- Spielberechtigung
+    D - Deutscher
+    G - Gleichgestellt
+    E - EU-Ausl„nder
+    A - Ausl„nder
+ 7- Geburtsjahr
+ 8- Woche der letzten Turnierauswertung (JJJJWW)
+ 9- DWZ-Index (0-0 bei Restpartien)
+10- FIDE-Elozahl
+11- FIDE-Titel
+    G - GM
+    I - IM
+    F - FM
+12- FIDE-ID
+13- FIDE-Land
+
+VEREINE.TXT - sortiert nach ZPS-Nummer
+-----------
+- ZPS-Nummer des Vereins
+- Landesverband
+- šbergeordneter Verband
+- Vereinsname
+
+VERBAND.TXT - sortiert nach Verbandnummer
+-----------
+- Verbandnummer
+- Landesverband
+- šbergeordneter Verband
+- Verbandname

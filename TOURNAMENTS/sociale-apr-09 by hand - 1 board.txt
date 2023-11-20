@@ -1,0 +1,105 @@
+sociale aprile 2009
+Cordenons (PN)
+ITA
+28/04/2009;28/04/2009
+Eugenio Cervesato
+5     // tournament type (0=swiss Dubov, 1, swiss Rating, 2=swiss Color Pefect, 3=Amalfi Rating, 4=round robin, 5=by hand)
+1     // tournament pairing (1=regular, 2=allow return !?, 3=absolutely free ??)
+5     // Rounds 
+1     // Team order criteria (1=Elo, 2= random, 3=alphabetical, 4=as entered)
+1     // max boards to play
+1     // max Players per Team
+
+9     // total Teams entered
+5     // total rounds yet generated
+6     // sort index of the following Team
+CERVESATO Eugenio
+1     // Number of Players
+CERVESATO Eugenio;PN_3N;300956;m;F;6022 3N;;105877;1533;30;
+1     // sort index of the following Team
+MILAZZO Mario
+1     // Number of Players
+MILAZZO Mario;PN_CM;130952;m;C;20017 CM;;128875;2014;30;
+7     // sort index of the following Team
+CERVESATO Cipriano
+1     // Number of Players
+CERVESATO Cipriano;PN_NC;061057;m;F;6022 NC;;118046;1455;30;
+3     // sort index of the following Team
+CERVESATO Fabio
+1     // Number of Players
+CERVESATO Fabio;PN_3N;180787;m;E;6022 3N;;110340;1611;30;
+4     // sort index of the following Team
+GUIDI Giacomo
+1     // Number of Players
+GUIDI Giacomo;PN_1N;71191;m;E;6022 1N;;127203;1587;30;
+2     // sort index of the following Team
+LA MALFA Stelio
+1     // Number of Players
+LA MALFA Stelio;TS_1N;051261;m;E;6024 1N;;106533;1671;30;
+5     // sort index of the following Team
+BATTISTON Edoardo
+1     // Number of Players
+BATTISTON Edoardo;PN_2N;131189;m;F;6022 2N;;114870;1587;30;
+8     // sort index of the following Team
+Decorato Damiano
+1     // Number of Players
+Decorato Damiano;PN;;m;;;;;1440;30;
+9     // sort index of the following Team
+MOZZON IVO
+1     // Number of Players
+MOZZON IVO;PN_--;140772;m;0;6022 --;;103832;1440;30;
+1     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-4-1-0
+1-1-1-0
+5-2-0-1
+1-1-0-1
+3-7-0-1
+1-1-0-1
+6-8-1-0
+1-1-1-0
+9-0-1-0f
+1-0-1-0f
+2     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-9-1-0
+1-1-1-0
+2-3-1-0
+1-1-1-0
+4-6-0-1
+1-1-0-1
+7-5-0-1
+1-1-0-1
+8-0-1-0f
+1-0-1-0f
+3     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+5-1-0-1
+1-1-0-1
+2-7-1-0
+1-1-1-0
+6-9-0-1
+1-1-0-1
+8-4-0-1
+1-1-0-1
+3-0-1-0f
+1-0-1-0f
+4     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-6-0.5-0.5
+1-1-0.5-0.5
+9-2-0.5-0.5
+1-1-0.5-0.5
+4-3-0-1
+1-1-0-1
+5-8-1-0
+1-1-1-0
+7-0-1-0f
+1-0-1-0f
+5     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+2-1-0-1
+1-1-0-1
+6-3-0.5-0.5
+1-1-0.5-0.5
+9-5-1-0
+1-1-1-0
+8-7-0-1
+1-1-0-1
+4-0-1-0f
+1-0-1-0f

@@ -1,0 +1,303 @@
+X San Gregorio PN
+Pordenone
+ITA
+21-07-2012;
+Eugenio Cervesato
+0     // tournament type (0=swiss Dutch, 1=swiss Dubov, 2=Swiss Simple, 3=swiss Perfect Colours, 4=Amalfi Rating, 5=round robin, 6=by hand)
+1     // tournament pairing (1=regular, 2=allow return, 3=absolutely free)
+6     // Rounds 
+1     // Team order criteria (1=Elo, 2= random, 3=alphabetical, 4=as entered)
+1     // max boards to play
+1     // max Players per Team
+126000     // string with tie break criteria
+27     // total Teams entered
+6     // total rounds yet generated
+1     // sort index of the following Team
+SOLINAS Carlo
+1     // Number of Players
+SOLINAS Carlo;TV;271057;m;CCM;20015;;110297;2090;30;
+2     // sort index of the following Team
+VARINI Massimo
+1     // Number of Players
+VARINI Massimo;TS;061067;m;CCM;6030;;103806;2082;30;
+3     // sort index of the following Team
+COZZARIN Davide
+1     // Number of Players
+COZZARIN Davide;PN;110288;m;CCM;6022;;115586;2026;30;
+4     // sort index of the following Team
+PAGNUTTI Lorenzo
+1     // Number of Players
+PAGNUTTI Lorenzo;UD;060443;m;CMA;6007;;103725;1986;30;
+5     // sort index of the following Team
+ZAMBON Roberto
+1     // Number of Players
+ZAMBON Roberto;TV;100164;;CM;;1967;0110942;0;30;
+6     // sort index of the following Team
+BORTOLIN Bruno
+1     // Number of Players
+BORTOLIN Bruno;TS;280950;m;D1N;6030;;103789;1903;30;
+7     // sort index of the following Team
+GIORDANO Massimiliano (W)
+1     // Number of Players
+GIORDANO Massimiliano;PN;171072;m;D1N;6022;;101993;1899;30;
+8     // sort index of the following Team
+BARP Denis
+1     // Number of Players
+BARP Denis;NN;;M;F;;--xx;0302740;1856;30;
+9     // sort index of the following Team
+BARP Alberto
+1     // Number of Players
+BARP Alberto;BL;301099;M;F;;--2N;0132758;1801;30;
+10     // sort index of the following Team
+GRIPSHI Bedri
+1     // Number of Players
+GRIPSHI Bedri;PN;070553;m;Exx;6024;;136747;1704;30;
+11     // sort index of the following Team
+STRINGHETTA Elio
+1     // Number of Players
+STRINGHETTA Elio;VE;170150;;2N;;1674;0128382;;30;
+12     // sort index of the following Team
+CERVESATO Fabio
+1     // Number of Players
+CERVESATO Fabio;PN;180787;m;E3N;6022;;110340;1626;30;
+13     // sort index of the following Team
+LA MALFA Stelio
+1     // Number of Players
+LA MALFA Stelio;PN;051261;m;E1N;6024;;106533;1626;30;
+14     // sort index of the following Team
+BRAHUSHAJ Gani
+1     // Number of Players
+BRAHUSHAJ Gani;PN;080149;m;Fxx;0;;141151;1560;30;
+15     // sort index of the following Team
+KINA Milto
+1     // Number of Players
+KINA Milto;PN;180258;m;Fxx;6024;;128159;1515;30;
+16     // sort index of the following Team
+GAVRANIC Vlado
+1     // Number of Players
+GAVRANIC Vlado;PN;051155;m;Fxx;0;;144492;1476;30;
+17     // sort index of the following Team
+BERNARD Federico
+1     // Number of Players
+BERNARD Federico;UD;110686;m;F3N;6009;;144208;1446;30;
+20     // sort index of the following Team
+PALLOZZI FRANCO
+1     // Number of Players
+PALLOZZI FRANCO;;;;;;;;1440;30;
+23     // sort index of the following Team
+TORRESAN LORENZO
+1     // Number of Players
+TORRESAN LORENZO;;;;;;;;1440;30;
+19     // sort index of the following Team
+BERTAPELLE ANDREA
+1     // Number of Players
+BERTAPELLE ANDREA;;;;;;;;1440;30;
+18     // sort index of the following Team
+BARP MATTEO
+1     // Number of Players
+BARP MATTEO;BL;160303;m;xxxx;20065;;145393;1440;30;
+22     // sort index of the following Team
+SPADARO DARIO
+1     // Number of Players
+SPADARO DARIO;;;;;;;;1440;30;
+21     // sort index of the following Team
+RIZZUTO GIUSEPPE
+1     // Number of Players
+RIZZUTO GIUSEPPE;;;;;;;;1440;30;
+24     // sort index of the following Team
+TROTTA Riccardo
+1     // Number of Players
+TROTTA Riccardo;PN;110682;m;Fxx;6022;;148542;1431;30;
+26     // sort index of the following Team
+SALONE Andrea
+1     // Number of Players
+SALONE Andrea;UD;201089;m;G2N;6009;;124308;1395;30;
+25     // sort index of the following Team
+CERVESATO Alessio
+1     // Number of Players
+CERVESATO Alessio;NN;;m;Gxx;0;;302742;1395;30;
+27     // sort index of the following Team
+PEDERIVA VALERIA
+1     // Number of Players
+PEDERIVA VALERIA;;;;;;;;1440;30;
+1     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+14-1-0-1
+1-1-0-1
+2-15-1-0
+1-1-1-0
+16-3-0-1
+1-1-0-1
+4-17-1-0
+1-1-1-0
+18-5-0-1
+1-1-0-1
+6-19-0-1
+1-1-0-1
+20-7-0-1
+1-1-0-1
+8-21-1-0
+1-1-1-0
+22-9-0-1
+1-1-0-1
+10-23-1-0
+1-1-1-0
+24-11-0-1
+1-1-0-1
+12-25-0-1
+1-1-0-1
+26-13-1-0
+1-1-1-0
+27-0-1-0f
+1-0-1-0f
+2     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-9-0-1
+1-1-0-1
+11-2-0-1
+1-1-0-1
+3-10-0.5-0.5
+1-1-0.5-0.5
+19-4-0-1
+1-1-0-1
+5-27-1-0
+1-1-1-0
+7-26-0-1
+1-1-0-1
+25-8-0-1
+1-1-0-1
+17-6-0-1
+1-1-0-1
+18-12-0-1
+1-1-0-1
+13-20-1-0
+1-1-1-0
+21-14-0-1
+1-1-0-1
+15-22-1-0
+1-1-1-0
+23-16-0-1
+1-1-0-1
+24-0-1-0f
+1-0-1-0f
+3     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+2-8-1-0
+1-1-1-0
+9-4-1-0
+1-1-1-0
+26-5-0.5-0.5
+1-1-0.5-0.5
+1-3-1-0
+1-1-1-0
+10-7-1-0
+1-1-1-0
+6-15-0.5-0.5
+1-1-0.5-0.5
+16-11-1-0
+1-1-1-0
+12-19-0-1
+1-1-0-1
+27-13-1-0
+1-1-1-0
+14-24-1-0
+1-1-1-0
+17-25-1-0
+1-1-1-0
+22-18-0-1
+1-1-0-1
+20-21-1-0
+1-1-1-0
+23-0-1-0f
+1-0-1-0f
+4     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+9-2-0-1
+1-1-0-1
+5-10-0-1
+1-1-0-1
+4-26-1-0
+1-1-1-0
+19-1-0-1
+1-1-0-1
+8-16-1-0
+1-1-1-0
+27-14-0-1
+1-1-0-1
+3-6-1-0
+1-1-1-0
+15-12-1-0
+1-1-1-0
+11-20-1-0
+1-1-1-0
+13-23-0-1
+1-1-0-1
+24-17-0-1
+1-1-0-1
+25-18-1-0
+1-1-1-0
+21-22-1-0
+1-1-1-0
+0-0-0-0
+0-0-0-0
+5     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+2-10-0-1
+1-1-0-1
+1-8-1-0
+1-1-1-0
+14-4-0.5-0.5
+1-1-0.5-0.5
+3-9-0.5-0.5
+1-1-0.5-0.5
+26-15-1-0
+1-1-1-0
+11-5-1-0
+1-1-1-0
+16-25-1-0
+1-1-1-0
+17-27-0.5-0.5
+1-1-0.5-0.5
+23-19-1-0
+1-1-1-0
+6-13-0-1
+1-1-0-1
+12-21-1-0
+1-1-1-0
+18-24-0-1
+1-1-0-1
+20-22-1-0
+1-1-1-0
+0-0-0-0
+0-0-0-0
+6     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+10-1-0.5-0.5
+1-1-0.5-0.5
+4-2-0-1
+1-1-0-1
+9-26-1-0
+1-1-1-0
+16-14-1-0
+1-1-1-0
+23-3-0-1
+1-1-0-1
+8-11-1-0
+1-1-1-0
+5-17-0-1
+1-1-0-1
+15-27-1-0
+1-1-1-0
+13-12-1-0
+1-1-1-0
+19-24-0.5-0.5
+1-1-0.5-0.5
+25-20-1-0
+1-1-1-0
+22-6-0-1
+1-1-0-1
+21-18-1-0
+1-1-1-0
+0-0-0-0
+0-0-0-0
+// for each round, floater set follows.
+upfloaters of round 1 ;|downfloaters of round 1 ;27;
+upfloaters of round 2 ;|downfloaters of round 2 ;24;
+upfloaters of round 3 ;1;7;17;|downfloaters of round 3 ;3;10;25;23;
+upfloaters of round 4 ;4;12;|downfloaters of round 4 ;26;15;
+upfloaters of round 5 ;10;3;11;13;22;|downfloaters of round 5 ;2;9;5;6;20;
+upfloaters of round 6 ;1;4;16;22;|downfloaters of round 6 ;10;2;14;6;

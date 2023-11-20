@@ -1,0 +1,167 @@
+4° ISP International Sports Meeting Chess Tournament
+Portoroz, Slovenia
+ITA
+04/06/2010;04/06/2010
+Andrej Znidarcic
+4     // tournament type (0=swiss Dutch, 1=swiss Dubov, 2=Swiss Simple, 3=swiss Perfect Colours, 4=Amalfi Rating, 5=round robin, 6=by hand)
+1     // tournament pairing (1=regular, 2=allow return, 3=absolutely free)
+6     // Rounds 
+1     // Team order criteria (1=Elo, 2= random, 3=alphabetical, 4=as entered)
+1     // max boards to play
+1     // max Players per Team
+600000     // string with tie break criteria
+14     // total Teams entered
+6     // total rounds yet generated
+2     // sort index of the following Team
+RICCI Angelo
+1     // Number of Players
+RICCI Angelo;CRFR;160763;m;3N;;;;1556;;
+14     // sort index of the following Team
+PRATICO' Paolo (W)
+1     // Number of Players
+PRATICO' Paolo;BDN-KA;141050;m;NC;;;0127492;1257;;
+12     // sort index of the following Team
+MANCINI Giuseppe
+1     // Number of Players
+MANCINI Giuseppe;BDN-KA;290967;m;NC;;;;1440;;
+9     // sort index of the following Team
+CIVICO Giovanni
+1     // Number of Players
+CIVICO Giovanni;BDN-PN;091150;m;NC;;;;1440;;
+10     // sort index of the following Team
+FAVALEZZA Angelo
+1     // Number of Players
+FAVALEZZA Angelo;CRV-GAR;000050;m;NC;;;;1440;;
+8     // sort index of the following Team
+ANTONUCCI Matteo
+1     // Number of Players
+ANTONUCCI Matteo;BDN-PS;;m;NC;;;;1440;;
+11     // sort index of the following Team
+LOMBARDI Isabella
+1     // Number of Players
+LOMBARDI Isabella;CRV-GAR;;f;NC;;;;1440;;
+5     // sort index of the following Team
+KURTOVIC Adis
+1     // Number of Players
+KURTOVIC Adis;BIH;040381;m;NC;;;;1500;;
+6     // sort index of the following Team
+REMETA Tomislav
+1     // Number of Players
+REMETA Tomislav;BIH;160983;f;NC;;;;1500;;
+7     // sort index of the following Team
+SEJFOVIC Ermin
+1     // Number of Players
+SEJFOVIC Ermin;BIH;061079;m;NC;;;;1500;;
+3     // sort index of the following Team
+ALIC Jasna
+1     // Number of Players
+ALIC Jasna;BIH;120775;f;NC;;;;1500;;
+4     // sort index of the following Team
+BLEDNOV Stanislav
+1     // Number of Players
+BLEDNOV Stanislav;PRA-UKR;171086;m;M;;2346;;;;
+13     // sort index of the following Team
+MIANI Alberto (W)
+1     // Number of Players
+MIANI Alberto;TV;000065;m;NC;;;;1440;;
+1     // sort index of the following Team
+VIDIC Miha
+1     // Number of Players
+VIDIC Miha;SLO;050290;m;CM;;2017;;;;
+1     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-7-1-0
+1-1-1-0
+8-2-0-1
+1-1-0-1
+3-9-0.5-0.5
+1-1-0.5-0.5
+10-4-0-1
+1-1-0-1
+5-11-1-0
+1-1-1-0
+12-6-1-0
+1-1-1-0
+0-0-0-0
+0-0-0-0
+2     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+3-1-0-1
+1-1-0-1
+2-9-1-0
+1-1-1-0
+4-6-1-0
+1-1-1-0
+7-5-0-1
+1-1-0-1
+12-8-1-0
+1-1-1-0
+11-10-0-1
+1-1-0-1
+0-0-0-0
+0-0-0-0
+3     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-12-1-0
+1-1-1-0
+10-2-0-1
+1-1-0-1
+4-3-1-0
+1-1-1-0
+9-5-0-1
+1-1-0-1
+6-11-1-0
+1-1-1-0
+8-7-0.5-0.5
+1-1-0.5-0.5
+0-0-0-0
+0-0-0-0
+4     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+5-4-0-1
+1-1-0-1
+2-1-0-1
+1-1-0-1
+3-12-0-1
+1-1-0-1
+7-6-0-1
+1-1-0-1
+10-8-0.5-0.5
+1-1-0.5-0.5
+11-9-0-1
+1-1-0-1
+0-0-0-0
+0-0-0-0
+5     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+4-2-1-0
+1-1-1-0
+1-5-1-0
+1-1-1-0
+12-10-1-0
+1-1-1-0
+6-8-0-1
+1-1-0-1
+9-7-1-0
+1-1-1-0
+11-3-0-1
+1-1-0-1
+0-0-0-0
+0-0-0-0
+6     // round number. follows groups of 2 lines for each match (Teams & boards pairing & results)
+1-4-0-1
+1-1-0-1
+2-12-0-1
+1-1-0-1
+5-6-1-0
+1-1-1-0
+8-9-0-1
+1-1-0-1
+3-10-0-1
+1-1-0-1
+7-11-1-0
+1-1-1-0
+0-0-0-0
+0-0-0-0
+// for each round, floater set follows.
+upfloaters of round 1 ;|
+upfloaters of round 2 ;|
+upfloaters of round 3 ;|downfloaters of round 3 ;
+upfloaters of round 4 ;|downfloaters of round 4 ;
+upfloaters of round 5 ;|downfloaters of round 5 ;
+upfloaters of round 6 ;|downfloaters of round 6 ;

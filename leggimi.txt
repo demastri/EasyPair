@@ -1,0 +1,524 @@
+JavaPairing - rev. 2.9 - Settembre 2015
+
+Questo programma gestisce il torneo di scacchi, sia esso a squadre o individuale (
+puoi definire squadre di un solo giocatore! -;), quindi registrazione, turni,
+risultati, classifiche, tabellone, rapporto per la Federazione e sito WEB da pubblicare.
+
+Ho iniziato questo lavoro perché insoddisfatto dei software commerciali che presentano
+alcune limitazioni che ritengo esagerate ed errori di programmazione impossibili
+da scoprire e da correggere in quanto il codice sorgente non viene reso pubblico.
+Volevo un prodotto snello, che facilitasse il lavoro dell'arbitro durante il torneo,
+per esempio: consentire di inserire anche i ritardatari dal database e sostituire
+i titolari con le riserve direttamente all'atto dell'inserimento dei risultati.
+Volevo un programma che consentisse tornei regolari ma anche a doppio girone o a girone
+completamente libero e che permettesse di modificare in corsa il sistema di abbinamento.
+Infine, ho adottato la filosofia dell' open-source cosicché ciascuno può contribuire
+allo sviluppo software e vedere cosa il programma fa effettivamente leggendo il 
+codice sorgente!
+Comunque lo sto facendo per contribuire al successo del movimento scacchistico!
+
+Il programma è correntemente sviluppato con:
+     - NetBeans IDE 7.0.1 (http://www.netbeans.org/downloads/)
+     - Java Runtime Environment (JRE) 1.6 from Sun Microsystems Inc. 
+       (http://java.sun.com/javase/downloads/index.jsp)
+I due tool sono disponibili anche impachettati assieme 
+(http://java.sun.com/javase/downloads/netbeans.html)
+ 
+La distribuzione gira su qualsiasi piattaforma così com'è, compresi Windows, Linux 
+e Macintosh, è solamente richiesto il supporto Java (JRE 1.6 o successivo).
+
+Per installare, espandi il file '.zip' nel disco fisso, conservando la struttura
+delle sottocartelle.
+Esegui il file 'JavaPairing.jar' che si trova nella sottocartella 'dist' (in effetti
+questo è l'unico file che realmente serve ad eseguire il programma). 
+I menù ed i messaggi sono interamente tradotti in italiano.
+Il programma può essere facilmente tradotto in altre lingue; basta creare il file
+'JavaPairing_xx.properties' con la traduzione delle stringhe, dove xx è il codice 
+della lingua (per dettagli vedi la sottocartella 'i18n').
+E' inoltre possibile avviarlo in un'altra lingua da quella nativa del PC, se 
+disponibile, creando un collegamento e aggiungendo xx e YY alla riga di lancio del
+programma, dove YY è il codice della nazione (aggiungi 'en US' per vedere 
+l'interfaccia originale in Inglese).
+
+(per utenti informatici) Per modificare il programma, bisogna lanciare NetBeans e 
+aprire la cartella (File/OpenProject ...), selezionare la cartella di installazione,
+cliccare 'Open Project Folder', quindi espandere l'albero fino a 'Source Packages'/
+'javapairing', e fare click su 'EnterFrame.java'.
+
+I dati dei giocatori possono essere importati da una qualunque distribuzione,
+file di testo, sia a spaziatura fissa che delimitato.
+E' stato predisposto uno schema per i file FIDE e FSI. Dopo aver richiamato lo schema
+e aver indicato il database più aggiornato, i giocatori vengono inseriti con drag&drop 
+(o doppio-click).
+
+Sono stati implementati i seguenti sistemi di abbinamento:
+- svizzero Olandese (approvato dalla FIDE !!)
+- svizzero Dubov (in attesa di approvazione dalla FIDE)
+- svizzero Semplice (basato sul rating)
+- svizzero a perfetta alternanza di colore (alterna tassativamente i colori)
+- Amalfi Rating (sistema approvato dalla FSI e in fase di valutazione da parte della FIDE) 
+- all'italiana (tutti contro tutti), basato sulle tabelle Berger
+- 'manuale'. Il programma assiste mostrando i giocatori (o le squadre) ordinate 
+  (il criterio di ordinamento è a scelta dell'utente), evidenziando gli avversari 
+  già incontrati, i vincoli imposti dai criteri sul colore, ed ottimizzando 
+  l'assegnazione del colore.
+
+L'output è generato in formato HTML; può essere stampato direttamente o inviato al 
+browser (vivamente consigliato). Vengono generati anche il rapporto per la Federazione
+ed il sito WEB del torneo. I file generati da JavaPairing sono portabili su tutti i 
+sistemi operativi, senza necessità di effettuare conversioni.
+
+Nella stessa cartella di questo file (leggimi.txt) trovi:
+- la licenza (gpl-3.0-standalone.htm)
+- CV Cervesato
+- JavaPairing manuale dell'utente (Italiano / Inglese / Tedesco)
+- sottocartella 'i18n' 
+  - info su come internazionalizzare il programma
+  - i codici lingua e nazione da utilizzare per il file tradotto
+  - i file localizzati per la lingua inglese l'italiano e il tedesco 
+- sottocartella 'TOURNAMENTS' 
+  - alcuni tornei reali, possono essere caricati dal programma
+- sottocartella 'test'
+  - alcuni tornei di test/simulazione, possono essere caricati dal programma
+- sottocartella 'DATABASES'
+  - alcuni schemi per importare i dati dei giocatori dalle distribuzioni FIDE e FSI
+  - alcune distribuzioni FIDE e FSI (.txt, .csv)
+- sottocartella 'REPORTS' 
+  - specifiche per generare il rapporto alla Federazione
+  - alcuni esempi di report
+- sottocartella 'AMALFI' 
+  - regole dell'algoritmo Amalfi Rating 
+  - info sull'implementazione dell'algoritmo in JavaPairing 
+  - alcuni tornei di prova
+- sottocartella 'SWISS' 
+  - regole FIDE per i tornei a sistema svizzero (in italiano e inglese)
+  - info sull'implementazione dell'algoritmo in JavaPairing (in inglese)
+- sottocartella 'ROUND ROBIN' 
+  - regole e documenti correlati per girone all'italiana
+- sottocartella 'KEIZER' 
+  - regole e documenti correlati ... potrebbe essere sviluppato in futuro
+
+Il programma è stato valutato positivamente ed indicizzato dalla FSI ed ha ottenuto 
+l'endorsment dalla FIDE (ottobre 2013). Esso può essere utilizzato in qualunque torneo, 
+sotto la responsabilità dell'arbitro.
+
+Spero troverai il programma JavaPairing di tuo gradimento! Se sì, è gradita una
+donazione intestata all'A.S.D. scacchi "Bobby Fischer" di Cordenons.
+La donazione è intesa come metodo di autofinanziamento delle attività del circolo
+e per incrementare l'offerta scacchistica, come pure sarà da stimolo a continuare
+lo sviluppo del programma.
+A chi sottoscrive sarà garantita la massima disponibilità di aggiornamenti, correzioni
+e supporto tecnico.
+Per il versamento utilizzare esclusivamente il bonifico bancario su:
+		A.S.D. Circolo Scacchi Cordenons 
+		c/o B.N.L. Pordenone
+		IBAN: IT86 N 01005 12500 000000000299
+Le donazioni alla società sportiva dilettantistica sono deducibili dalle imposte
+(19%). Richiedi la ricevuta tramite email. Grazie.
+
+per contatto: Eugenio Cervesato ( eucerve@tin.it  cell. 338 5960366 )
+
+*********************************************************************************
+
+rapporto migliorie / correzione di errori successivo alla rev. 1.0
+
+rev. 2.9 - Settembre 2015
+
+032 argomento: miglioria; generale
+
+    - corretto bug calcolo variazione Elo (arrotondamento)
+    - corretto bug generazione report FIDE (half point bye)
+    - corretto bug lettura report FIDE (half point bye)
+
+rev. 2.8 - Settembre 2014
+
+031 argomento: miglioria; abbinamento
+
+    - Migliorato il motore svizzero olandese per situazione di complessità computazionale
+      quando in un gruppo molto numeroso non funziona nemmeno il workaround di 
+      "splittare" nei due sottogruppi per ciascun colore atteso
+    - Migliorata la lettura del tracciato FIDE quando nello stesso turno sono presenti 
+      più BYE (viene conservato solo l'ultimo letto se in numero dispari. Gli altri 
+      sono assunti essere half-point-bye o full-point-bye. Attenzione, questa assunzione
+      può essere causa di errore del checker!)
+    - Adeguato il checker e la visualizzazione del tabellone secondo quanto illustrato 
+      al punto precedente
+
+030 argomento: miglioria; generale
+
+    - Adeguati i calcoli per Elo Fide al regolamento in vigore dal 1o luglio 2014
+      K=40/20/10
+
+rev. 2.7 - Novembre 2013
+
+	*** OTTENUTO L'ENDORSMENT DEL SISTEMA DI ABBINAMENTO 'SVIZZERO OLANDESE' DALLA FIDE !! ***
+
+rev. 2.6 - Giugno 2013
+
+029 argomento: miglioria; generale
+
+    - Aggiornato il motore svizzero Olandese a Istanbul 2012 (bug C.1, X e Z)
+    - Adeguata la lettura/scrittura del formato FIDE a Istanbul 2012 (forfeit con colore)
+    - Migliorato il tabellone e la statistica
+    - Aggiunto import di squadre da file .csv (il nome della squadra deve essere
+      posizionato nella colonna precedente di quella contenente i nomi dei giocatori su
+      un proprio record; va predisposto un filtro sul tracciato record del giocatore. 
+      I dati vanno importati in blocco con '*' nel campo 'carica i giocatori dal DB')
+    - Possibilità di abblencare un giocatore in inserimento risultati per
+      torneo a squadre (risultato CGS 2-0f senza assegnazione di scacchiera)
+    - Migliorato l'import del report FIDE
+    - Aggiunta la possibilità di utilizzare una procedura batch per testare i report FIDE.
+      Il nome del file va passato al programma come argomento della riga di lancio.
+    - Possibilità di accedere a più file dati giocatore contemporaneamente.
+
+rev. 2.5 - Febbraio 2013
+riprende la procedura di endorsment
+
+028 argomento: miglioria; generale
+
+    - Sviluppato il checker per testare in automatico i report FIDE con il motore svizzero
+      Olandese (check box nella finestra 'apri torneo')
+    - Aggiornato il motore svizzero Olandese a Istanbul 2012
+    - Migliorata la risposta nei casi di complessità computazionale
+    - Tolta l'accelerazione automatica (messo check box nel setup)
+    - Corretto un errore di classifica relativo all'assegnazione di 1/2 punto al BYE
+    - Aggiornato il limite minimo ELO FIDE = 1000
+
+rev. 2.4 Maggio 2012
+
+027 argomento: miglioria; generale
+
+    - Migliorato il motore svizzero olandese
+    - Il risultato 0-0 è adesso accettato. Per le partite aggiornate usa 1/2-1/2
+    - Aggiornato K=30 per la stima della tranche FIDE per giocatori non classificati
+    - Migliorato il click del mouse sulle tabelle
+
+rev. 2.3 Marzo 2012
+
+026 argomento: miglioria; abbinamento
+
+    - Migliorato il motore svizzero olandese per situazioni estreme.
+    - Aggiunto il 'livello di verbosità' alla finestra di spiegazioni (il testo è
+      salvato anche nel file 'log.txt', codificato "UTF-8". Nell'aprire tale file
+      con un editor di testo o un wordprocessor può essere necessario specificare
+      la codifica per avere la corretta rappresentazione delle frecce che indicano
+      i vincoli floater)
+    - Nel riportare i gruppi di punteggio sono utilizzati i seguenti simboli:
+      w  = colore atteso bianco
+      b  = colore atteso nero
+      w? = colore atteso debolmente bianco ma può essere cambiato (regola A7.e)
+      b? = colore atteso debolmente nero ma può essere cambiato   (regola A7.e)
+      W  = colore atteso assolutamente bianco
+      B  = colore atteso assolutamente nero
+      W? = colore atteso assolutamente bianco ma può essere cambiato (regola A7.d)
+      B? = colore atteso assolutamente nero ma può essere cambiato   (regola A7.d)
+      .  = nessuna preferenza di colore
+      -  = no vincolo floater
+      freccia su  = vincolo upfloater   (regola B5 quindi B6)
+      freccia giù = vincolo downfloater (regola B5 quindi B6)
+
+rev. 2.2 Novembre 2011
+
+025 argomento: miglioria; generale
+
+    - aggiunto un simulatore di torneo, con varie possibilità di parametrizzazione.
+      Si accede digitando 'simulation' nel campo 'carica i giocatori dal DB' della
+      pagina 'Iscrizione'
+    - Corretto bug Buchholz Kallithea (con due o più partite non disputate)
+
+024 argomento: miglioria; abbinamento
+
+    - Corretti alcuni bug dei motori svizzero Olandese e Dubov e introdotte
+      migliorie per evitare possibili complessità di calcolo di ordine fattoriale.
+      Tuttavia non è del tutto escludibile che in situazioni estreme si vada a 
+      superare un tempo di elaborazione ritenuto ragionevole. In tale evenienza
+      consiglio di interrompere l'eleborazione e testare per quel turno un motore 
+      alternativo
+
+rev. 2.1 Agosto 2011
+
+023 argomento: miglioria; abbinamento
+
+    - Il motore Svizzero Olandese è stato migliorato per prevenire la complessità di
+      ordine fattoriale che si verifica in un gruppo ampio con colori sbilanciati 
+      (torneo 'Città di Cordenons 2011'; turno 2; gruppo 1; p=18; x=2)
+    - bug fix motore Svizzero Olandese ('sample from Mario Held 14_5'; turno 4; gruppo 5);
+      quando x=0 strict rimuovere per primi i vincoli float, quindi il flag 'strict'.
+    - bug fix assegnazione colore
+    - bug fix ordinamento finale delle coppie
+    - migliorata la spiegazione dei colori attesi 
+      
+022 argomento: miglioria; generale
+
+    - Grazie al lavoro di Georges Marchal <gmarchal (at) scarlet.be> aggiunta la 
+      traduzione del programma in Francese!
+    - Il codice sorgente è stato aggiornato per NetBeans IDE 7.0
+    - Il calcolo dell'Elo FIDE è stato aggiornato alle nuove disposizioni del 1.7.2011
+    - Il calcolo del Buchholz è stato aggiornato alle disposizioni del Congresso 
+      Kallithea 2009
+    - Può leggere (importare) il report FIDE
+
+021 argomento: miglioria; output
+
+    - E' stata ulteriormente migliorata l'impaginazione della stampa di 
+      'statini da tavolo' e 'cartellini dei giocatori'.
+      E' vivamente consigliato utilizzare il pulsante 'manda al browser' e fare
+      'anteprima di stampa' in esso, operando in congiunzione con l'opzione 
+      'n° righe per pagina' fino ad ottenere l'impaginazione ottimale! 
+      Nei PC dove la chiamata al browser non funzionasse, aprire direttamente 
+      il file 'temp.html'. Se presente nel browser, utilizzare lo zoom per 
+      ridurre il consumo di carta ed inchiostro.
+
+rev. 2.0 - gennaio 2011
+
+020 argomento: miglioria; generale
+
+    - E' stato aggiunto un dialogo all'avvio del programma per scegliere tra
+      torneo individuale/torneo a squadre/apertura file esistente.
+    - Aggiunti i cartellini dei giocatori.
+    - Aggiunto il criterio di spareggio 'Punti scacchiera pesati' per i tornei a 
+      squadre, sommando i punti individuali moltiplicati per il coefficiente di 
+      scacchiera (1,9 - 1,7 - 1,5 - 1,3 ... 0,1)
+    - Sono state migliorate grafica ed icone.
+    - E' stata aggiunta la possibilità di fondere due file di torneo, in modo da:
+      a) consentire la predisposizione di grossi tornei open inserendo i giocatori
+         da più PC e poi fondendo i file, 
+      b) riutilizzare file di torneo in modo ciclico,
+      c) convertire un torneo a squadre ad individuale.
+      Nella pagina di apertura file è stato aggiunto sulla destra un controllo 
+      checkbox, a disposizione se è in memoria (letto/salvato) un torneo e non 
+      sono stati generati (o sono stati completamente rimossi) i turni.
+      n.b. per l'esportazione si consiglia di passare per il rapporto per la 
+           Federazione.
+    - Secondo le regole FIDE, il delta performance per punteggio 0% è stato 
+      posto a -800.
+    - E' stato aggiunto il flag 'F' per Elo FIDE
+
+rev. 1.9 - dicembre 2010
+
+019 argomento: miglioria; output
+
+    - E' stata completata la pagina delle variazioni Elo con l'aggiunta della 
+      variazione tra giocatori con punteggio Fide (sia con k=25 che 15) ed il 
+      calcolo della 'tranche FIDE' per i nazionali se applicabile 
+
+018 argomento: miglioria; abbinamento
+
+    - migliorata la segnalazione del colore atteso e dei vincoli (colore e floats)
+
+rev. 1.8 - novembre 2010
+
+017 argomento: miglioria; abbinamento
+
+    - completato lo sviluppo del motore di abbinamento 'svizzero Olandese'.
+      Passa tre tornei di test: NORDICWC, TU_29_11 and TU_31_13, può scambiare
+      qualsiasi numero di elementi tra S1 ed S2.
+
+rev. 1.7 - ottobre 2010
+
+016 argomento: miglioria; abbinamento
+
+    - iniziato lo sviluppo del motore di abbinamento 'svizzero Olandese' con
+      l'obiettivo di diventare pienamente compatibile con le regole ufficiali
+      della FIDE. Al momento passa tre tornei di test:
+      NORDICWC, TU_29_11 e TU_31_13, ma ovviamente potrebbe non passarne altri ...
+      L'implementazione corrente può scambiare tra S1 ed S2 un elemento alla 
+      volta oppure gli ultimi due di S1 con i primi due di S2.
+
+rev. 1.6 - luglio 2010
+
+015 argomento: miglioria; generale
+
+    - E' stato aggiunto il report per la Federazione Tedesca
+    - nello schema di importazione dei giocatori in formato variabile si possono
+      utilizzare il carattere '|' per legare assieme due campi ed il carattere
+      '-' per estrarre da un campo solo la prima parte (introdotto per leggere
+      il formato tedesco del file SPIELER.TXT) 
+    - aggiunto l'ordinamento delle squadre/giocatori nella griglia di iscrizione,
+      attivo sino alla formazione del primo turno, mediante click sull'intestazione
+      della colonna o bottone destro del mouse
+    - corretto un bug sul flag 'ritirato' per i tornei individuali
+    - integrato il tabellone con il turno corrente anche se con risultati incompleti
+      (in precedenza veniva visualizzato '-BYE'). Il risultato mancante viene 
+      segnalato con il simbolo '?'. Per i tornei a squadre vengono abbinati i soli 
+      titolari. Ai fini dello spareggio tecnico rimane il BYE in quanto non è 
+      ipotizzabile quale sarà il risultato della partita. Per avere la classifica 
+      all'ultimo turno realmente giocato bisogna tornare alla pagina 'turni' e 
+      scalare il contatore di turno
+    - corretto un bug sulla classifica parziale per classi di età
+    - migliorata l'impaginazione del testo che si ottiene con l'opzione 
+      'copia come testo' nella pagina 'Dati in Uscita'     
+
+rev. 1.5 - giugno 2010
+
+014 argomento: miglioria; generale
+
+    - completato il manuale utente
+    - aggiunto il documento 'implementation of the Swiss' nella cartella 'SWISS'
+    - aggiunta la traduzione in lingua tedesca del programma e del manuale utente
+    - aggiunte alcune simulazioni
+    - migliorata l'interfaccia grafica
+    - migliorata la gestione degli schemi di importazione 
+    - aggiunta opzione per importare in blocco i giocatori da un proprio database
+    - corretto bug nel calcolo del TPR
+    - sostituito il criterio di spareggio tecnico 'Partite non giocate', rivelatosi
+      un nonsense, con 'Punti %', calcolato per coerenza con gli altri criteri di 
+      spareggio secondo la regola FIDE ((somma punti in partite effettivivamente 
+      giocate + patte per i BYE)/numero turni*100) anche se non mi convince del 
+      tutto, quindi abbatte di 1/2 punto l'eventuale vittoria per BYE o Forfeit
+    - aggiunto il numero del tavolo alla pagina 'Risultati'
+    - aggiunto un pulsante per interrompere il calcolo degli abbinamenti
+
+rev. 1.4 - maggio 2010
+
+     AVVERTENZA: i file salvati in precedenza devono essere resi compatibili con 
+                 la nuova versione del programma, inserendo una riga vuota dopo 
+                 "... // max Players per Team" e prima di 
+                 "...   // total Teams entered", mediante editor di testo. 
+                 Ciò crea la riga su cui andrà memorizzato il criterio di spareggio.
+
+013 argomento: miglioria; abbinamento
+    Problema:
+      L'implementazione dell'Amalfi rating non escludeva gli assenti.
+    Soluzione:
+      L'Amalfi rating ora correttamente esclude gli assenti dalla lista di giocatori
+      da abbinare. 
+
+012 argomento: miglioria; generale
+    - il numero di squadre è stato portato a 500
+    - aggiunta icona 'Ripristina' nella riga di ricerca del giocatore nel database
+    - nella stessa riga vengono gestiti i tasti <Invio> e <Canc>
+    - nella lista viene restituito anche l'eventuale risultato negativo della ricerca
+    - è stato migliorato l'abbinamento manuale dei ritardatari
+    - i criteri di spareggio sono selezionabili nella pagina di setup
+    - i risultati non standard sono correttamente gestiti
+    - nell'output della classifica viene riportato anche l'ID
+    - l'output è stato migliorato aggiungendo i salti pagina. Per utilizzare tale
+      funzione avanzata bisogna inviare l'ouput al browser, pulsante 'manda al browser',
+      e fare da lì anteprima di stampa
+    - il tabellone e il turno corrente presentano i colori in italiano 
+
+rev. 1.3 - marzo 2010
+
+011 argomento: miglioria; output
+    Problema:
+      Mancava il report FSI per l'omologazione.
+    Soluzione:
+      E' stato aggiunto il report FSI (estensione .elo)
+
+010 argomento: miglioria; output
+    Problema:
+      Mancava l'elenco alfabetico delle squadre/giocatori.
+    Soluzione:
+      E' stato aggiunto l'elenco alfabetico dopo la lista per ID.
+      E' stata migliorata anche l'assegnazione degli ID al primo turno.
+
+009 argomento: miglioria; abbinamento
+    Problema:
+      L'implementazione del Dubov non era pienamente conforme alle specifiche per 
+      l'ordinamento dei giocatori.
+    Soluzione:
+      Adesso la prima metà (colore Bianco) è ordinata per ARO crescente, Rating 
+      crescente e alfabeticamente; la seconda metà (colore Nero) è ordinata per 
+      Rating decrescente, ARO decrescente e alfabeticamente (art. 6.2 prima parte).
+
+rev. 1.2 - gennaio 2010
+
+008 argomento: miglioria; abbinamento
+    Problema:
+      In un torneo svizzero può succedere, specialmente se c'è un ampio range
+      di forza di gioco, che due o più squadre (giocatori) finiscano a punteggio 
+      pieno. Questo si verifica con maggiore probabilità se il numero di squadre 
+      (giocatori) supera 2 elevato al numero di turni a giocare.
+    Soluzione:
+      E' stata introdotta l'accelerazione del torneo svizzero se il numero di
+      squadre (giocatori) a punteggio pieno supera 2 elevato il numero di turni
+      ancora da giocare, ad esclusione dell'ultimo turno.
+      Lo scopo è di appaiare le squadre (giocatori) con più alto rating tra loro
+      fin dal primo turno, e quindi nei turni successivi utilizzare i perdenti per
+      eliminare dal gruppo di testa i vincenti "della seconda metà" il più 
+      velocemente possibile. L'accelerazione cessa non appena ciò si realizza o
+      necessariamente quando manca solo un turno alla fine. 
+      Questa modalità assume che le squadre (giocatori) con rating più basso non
+      vincano ripetutamente contro quelle a rating più alto. Come ogni sistema
+      probabilistico, può essere inficiato da una sequenza di risultati inattesi.
+      Questo comunque non altera il fatto che nel lungo periodo si realizzi 
+      l'obiettivo di evitare vincitori ex-equo al top del punteggio.
+      L'accelerazione scatta automaticamente, non ci sono opzioni nel setup.
+      Se si desidera forzare l'accelerazione basterà ridurre momentaneamente il
+      numero di turni da giocare. Viceversa, per escludere del tutto l'accelerazione
+      si può agire incrementando momentaneamente il numero di turni da giocare.
+
+007 argomento: correzione errore; abbinamento
+    Problema:
+      Il sistema Olandese presentava instabilità, in particolare nel superamento
+      del vincolo sul colore.
+    Soluzione: 
+      E' stato modificato l'algoritmo di selezione di un gruppo disomogeneo; 
+      è stato ottimizzato l'algoritmo di permutazione degli elementi delle
+      coppie conseguente alla rimozione del vincolo sul colore.
+
+006 argomento: miglioria; output
+    Problema:
+      Nei turni non venivano mostrati i punti fatti.
+    Soluzione:
+      Nella visualizzazione del turno corrente è stato aggiunto il punteggio.
+
+005 argomento: correzione errore; altro
+    Problema:
+      Saltuariamente il rapporto per la federazione ed il sito WEB non venivano 
+      creati.
+    Soluzione:
+      E' stato aggiunto un controllo sull'estensione del file.
+
+rev. 1.1 - novembre 2009
+
+004 argomento: miglioria; output
+    Problema:
+      L'output è generato in HTML, il che è ottimo per la stampa e per la 
+      pubblicazione sul WEB, ma può servire anche in formato testuale piano, 
+      per esempio per preparare un rapporto non standard alla Federazione o un 
+      comunicato stampa.
+    Soluzione:
+      E' stato aggiunto il nuovo pulsante 'copia come testo', che compone un testo
+      piano a partire dall'HTML visualizzato nella finestra e lo invia alla clipboard,
+      cosicchè può essere incollato in qualunque editor di testo.
+      La conversione è abbastanza soddisfacente, meglio di quanto si potrebbe fare 
+      con il copia/incolla standard! La procedura è ottimizzata per la risoluzione
+      1024x768.
+
+003 argomento: miglioria; stampa
+    Problema:
+      Gli statini da tavolo non riportano il numero del turno.  
+      Questo può causare confusione sul tavolo della direzione di gara.
+    Soluzione:
+      Gli statini riportano ora correttamente il nome del torneo ed il numero 
+      del turno corrente.  
+
+002 argomento: correzione errore; stampa
+    Problema:
+      Il pulsante 'manda alla stampante' genera uno spiacevole zoom.
+      Questa è la ragione per cui era stato introdotto il pulsante 'manda al browser'
+      potendo poi sfruttare l'anteprima di stampa del browser per impostare i margini
+      ed un accettabile fattore di scala (per i browser che hanno questa funzione ...)
+    Soluzione:
+      Grazie ad una modifica alla classe PrintMe di Jan Michael Soan (www.jmsoan.com),
+      la procedura di stampa è stata personalizzata potendo impostare il formato della
+      carta (A4), i margini (1 cm.) ed un fattore di scala dinamico.
+      Questo risolve il problema.
+
+001 argomento: miglioria; abbinamento
+    Problema:
+      Per i sistemi Dubov e Olandese si è verificata una situazione estrema in un 
+      torneo reale, con gruppo di punteggio troppo eterogeneo (al 6° turno di un 
+      torneo con 10 squadre, a causa dell'annullamento di molte coppie, si è formato 
+      un gruppo di 8 squadre, con punteggio da 8 a zero!!).
+      In questa situazione il normale meccanismo svizzero 'S1 vs S2' può alterare
+      il torneo e portare ad assegnare i premi secondari in modo iniquo!
+      Questo sembra più un problema dello svizzero che dell'implementazione. Infatti
+      anche altri programmi dimostrano lo stesso limite.
+    Soluzione: 
+      Ho aggiunto il suggerimento di passare temporaneamente al sistema Amalfi rating,
+      che procedendo in modo sequenziale riesce a generare coppie più omogenee.
+
+*********************************************************************************=

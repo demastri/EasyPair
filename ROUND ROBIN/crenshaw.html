@@ -1,0 +1,305 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="description" content="Round robin pairing table generator after Crenshaw-Berger">
+<meta name="keywords" content="round-robin, table, generator, Crenshaw, Berger, round robin generator">
+<title>Porter-Crenshaw-Berger Tables</title>
+<SCRIPT type="text/javascript">
+
+function StartUp() {
+  document.tform.wbpcren[0].checked = true; // Default is Porter-Berger
+  document.tform.select1[1].checked = true; // Sequential players is default
+  document.tform.flipit[0].checked = true;  // Will reverse all colors if checked
+  document.tform.newtab[0].checked = true;  // Default is to rewrite current screen
+  document.tform.NoPlayers.focus();
+}
+
+function randomize(n2,shuffle) {
+   var deck = new Array;
+    for (var i= 0; i < n2; i++)
+       deck[i] = i;
+     for (i=n2-1; i >= 0; i--) {
+       var r = Math.floor(Math.random() * i) ; // Pick one from those remaining
+       shuffle[i] = deck[r];
+       deck[r] = deck[i]; // Move last of those remaining to slot just chosen
+     }
+}
+
+function tournament () {
+  var floatTable = new Array
+  var n, entered, i, increment=1, atype=0, minmove=0, flipcolors=0;
+  if (document.tform.select1[0].checked == false)  //Set for sequential players and min. moves
+    atype=1;
+  if (document.tform.select1[2].checked == true)
+    minmove=1;
+  if (document.tform.flipit[1].checked == true)  // If set will swap the colors before they are displayed
+    flipcolors=1;
+  entered = document.tform.NoPlayers.options[document.tform.NoPlayers.selectedIndex].value;
+  n = entered;
+  if (isNaN(n)) {
+    alert("Must enter a number"); return; }
+  var nr = n - 1 // Number of rounds
+  var n2 = n / 2
+  var x, j, temp, colorFlag, incr
+
+  var html = '<html><head><title>' + nr + ' or ' + n + ' players</title></head><body><table><caption><font size="4">' + nr +
+      ' or ' + n + ' players</font></caption>\n<tr><th> Rd</th><th colspan=' + (n/2 - 1) + '>Pairings</th></tr>\n'
+  var max_round = (document.tform.rr2.checked == true) ? (n - 1) * 2 : n-1;
+  var test_r = 0;
+  for (var r=1; r<= max_round; r++) {  // r is the round number.
+    if (r == 1) {       // Round 1 initially seat the players
+
+      if (document.tform.wbpcren[1].checked == true) {  // Crenshaw option
+        incr=2; j=1; } // incr gives every other seat clockwise
+      else {   // Porter option
+        incr=n-3; j = 0; } // incr gives every other seat counterclockwise
+
+      for (i = 1; i < n; i++) {
+        floatTable[j]=i;
+        j += incr;
+        j = j % (n-1);
+      }
+
+      floatTable[nr]=n;  // Identifies the "ghost" player, will not move
+    }
+    else {             // Other rounds, rotate the players "clockwise"
+      temp = floatTable[n-2];
+      for (i=n-2;  i > 0 ; i--) {
+        floatTable[i] = floatTable[i-1]
+      }
+      floatTable[0] = temp;
+    }
+
+    if (r == n) {
+       flipcolors ^= 1; // Swap colors for 2nd half
+       test_r = 1 }
+
+    html += '<tr><td><b>' + formatR(r) + ':</b></td>'  // Display the round number
+    i=0 // i is the board number about to be displayed, changed at bottom of loop
+    if (atype == '1')
+      increment=2;
+
+    if (document.tform.select1[3].checked == true) {
+      shuffle = new Array
+      randomize(n2,shuffle);
+      var kr = 0;
+      i = shuffle[0];
+    }
+
+    while (1) {     //Must get out of this loop with break
+      if (i == 0)   //At ghost board, color determined by round number
+        colorFlag = ((r-test_r)%2) ? 1 : 0;
+      else            //On other boards, board number determines it
+        colorFlag = (i % 2) ? 0 : 1;
+
+      colorFlag ^= flipcolors; //Will reverse color assignment if checked
+
+      html += '<td>&nbsp;' + formatR(floatTable[colorFlag?i:nr-i])  //White
+      html += '-'  + formatL(floatTable[colorFlag?nr-i:i]) + "</td>\n" //Black
+
+      if (document.tform.select1[3].checked == true) {
+        if (++kr < n2)
+          i = shuffle[kr];
+        else
+          break;
+      }
+      else {
+
+        if (minmove && (i==0) && !(r % 2))
+          i = 1;
+        else
+          i+= increment;
+        if (i >= n2)
+          if (increment == 1)  //Board number option
+            break;
+          else  {  //Come back to display the boards we missed
+            increment = -2;
+            i = ((i > n2) ? i - 3 : --i) ;
+          }
+
+        if ((i < 1) && (increment == -2)) //Finished with NOT board number option, exit loop
+          break;
+
+      }
+    }
+    html += '</tr>\n'
+  }
+
+  if (document.tform.rr2.checked == true)  // Reset this if double round robin.
+    flipcolors ^= 1;
+
+  html += '</tbody></table></body></html>'
+  if (document.tform.newtab[1].checked == true) { //Set up to build table in new window
+    var wHeight = 140 - - (n - 4) * 25
+    var wWidth  = 160 - - (n - 4) * 23
+    var AvailHeight = window.screen.availHeight
+    var AvailWidth  = window.screen.availWidth
+    if (parseInt(AvailHeight) < parseInt(wHeight)) wHeight = AvailHeight
+    if (parseInt(AvailWidth) < parseInt(wWidth)) wWidth = AvailWidth
+    var vOffset = parseInt(AvailHeight/2) - parseInt(wHeight/2)
+    var hOffset = parseInt(AvailWidth/2) - parseInt(wWidth/2)
+    var wOption = "resizable,status,scrollbars,width=" + wWidth + ",height=" + wHeight +
+                  ",left=" + hOffset + ",top=" + vOffset
+
+    var w = window.open("","gentable",wOption);
+    w.document.write(html);
+    w.document.close();  }
+  else
+    document.write(html); //Over write current screen, but may be hard to redo
+}
+
+function formatR (x) { if (x < 10) return '&nbsp;&nbsp;' + x; else return x;} //Right justify, round numbers and white player
+function formatL (x) { if (x < 10) return x + ' '; else return x;} //Left justify, used for player having black
+</script>
+</head>
+
+<body onload="StartUp()">
+
+<form name="tform" onsubmit="tournament()">
+  <table width="1001" height="580">
+    <tr>
+      <td width="91" height="24"></td>
+      <td width="67" height="24"></td>
+      <td width="62" height="24"></td>
+      <td width="31" height="24"></td>
+      <td width="96" height="24"></td>
+      <td height="24" width="107"><b><font size="4">Round Robin</font></b></td>
+      <td height="24" width="408"><b><font size="4">Pairings</font></b></td>
+      <td width="2" height="24"></td>
+      <td width="81" height="24"></td>
+    </tr>
+    <tr>
+      <td width="91" height="21"><input type="radio" name="wbpcren">Porter</td>
+      <td colspan="2" height="21" width="135"><input type="radio" name="select1">By
+        board number.</td>
+      <td width="133" height="21" colspan="2"><input type="radio" name="flipit">Normal&nbsp;Colors</td>
+      <td height="21" width="521" colspan="2"><input type="radio" name="newtab">Rewrite
+        screen</td>
+    </tr>
+    <tr>
+      <td width="91" height="21"><input type="radio" name="wbpcren">Crenshaw</td>
+      <td colspan="2" height="21" width="135"><input type="radio" name="select1">Sequential
+        Players.</td>
+      <td width="133" height="21" colspan="2"><input type="radio" name="flipit"><span style="background-color: #FFFF00">Reversed&nbsp;Colors</span></td>
+      <td height="21" width="107"><input type="radio" name="newtab">New screen</td><td width="408" height="21">
+        <b><span style="background-color: #00FF00">Crenshaw</span></b><span style="background-color: #00FF00">
+        &amp; <b>Sequential</b> are USCF defaults</span>.</td>
+    </tr>
+    <tr>
+      <td width="91" height="41"></td>
+      <td colspan="2" height="41" width="135"><input type="radio" name="select1">Min.
+        Moves</td>
+      <td height="41" colspan="3" width="246"><span style="background-color: #FFFF00">2<sup>nd</sup>
+        half of Round Robin or splice in <a href="late.htm">late</a> players</span></td>
+    </tr>
+    <tr>
+      <td width="91" height="21"></td>
+      <td colspan="2" height="21" width="135"><input type="radio" name="select1"><span style="background-color: #00FFFF">Court
+        Balanced</span></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="41" width="164">Enter number of players (do last):</td>
+      <td width="62" height="41"><select name="NoPlayers" onChange="tournament();">
+          <option selected="SELECTED" value="N=">N=</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+          <option value="26">26</option>
+          <option value="28">28</option>
+          <option value="30">30</option>
+          <option value="32">32</option>
+        </select>
+      <td height="41" colspan="2" width="133"><input type="button" id="bClick1" value="Click" onclick="tournament()"></td>
+      <td colspan="2" height="41" width="521"><input type="checkbox" id="rr2" value="rr2">Click for double round robin</td>
+    </tr>
+    <tr>
+      <td colspan="7" height="135" width="898">(Internal) <b>Board Number</b> Players are
+        initially seated in every other chair and rotate by at most one
+        position.<br>
+        <br>
+        <b>Sequential players</b> As above except except only odd boards are
+        displayed from left to right starting from the &quot;ghost&quot; board,
+        then even boards from right to left. Because sequential players were seated in
+        every other chair, they will appear to be seated next to the next
+        sequential higher or lower pairing numbered players. This is how the
+        tables appear in <b>Official Rules</b> (<a href="http://main.uschess.org" target=new>US. Chess Federation</a>).<br>
+        <br>
+        <b>Min. Moves</b> Same as sequential except that alternate rounds are
+        displayed in reverse order and only half the players move each round.</td>
+    </tr>
+    <tr>
+      <td colspan="7" height="97" width="898">Example for 12 players in board
+        order in Rd. 1:<br>
+        <b>&nbsp;1:&nbsp;&nbsp;&nbsp; </b>1-12&nbsp;&nbsp; 7-6&nbsp;&nbsp;
+        11-2&nbsp;&nbsp; 8-5&nbsp;&nbsp; 10-3&nbsp;&nbsp; 9-4
+        <p>12 players on Sequential Players in Rd. 1 (Same for Min. Moves, but
+        reverses on even numbered rounds):<br>
+        <b>1:</b>&nbsp;&nbsp;&nbsp;&nbsp; 1-12 11-2&nbsp;&nbsp; 10-3&nbsp;&nbsp;
+        9-4&nbsp;&nbsp;&nbsp; 8-5&nbsp;&nbsp;&nbsp; 7-6</td>
+    </tr>
+    <tr>
+      <td colspan="7" height="154" width="898">
+        <b>Porter</b> is a simple modification to the original <b>Berger</b>
+        tables which started with Player 1 starting with two whites while
+        another player started with two blacks.&nbsp; E.g., with 12 players, 1-6
+        had white against 12-7 respectively and 7 starts with two blacks.&nbsp;
+        The modification is 1 has white against 12, but 2-6 have <u>black</u>
+        against 11-7. <a href="rr3.htm">Click here</a> for an example. <b>Crenshaw</b>
+        corrected the same problem, but opponents are in descending order.<br>
+        In chess, the first opponent has White.  For other games or sports this may also
+        indicate color or home/away status, who calls a coin toss, the winner of the coin
+        toss, or ignored.&nbsp; <b><span style="background-color: #00FFFF">Court
+        Balanced</span></b> isn't applicable to chess but may be helpful when
+        assigning tennis courts or time slots randomly.
+        <p>To generate random pairing numbers, click <a href=permutation.htm>here</a>.
+        To display each player's schedule in <b>Porter</b> order, click <a href=schedule.htm>here</a>;&nbsp;
+        players can create their own schedules <a href=wyorrp.htm>here</a>.&nbsp;&nbsp;
+        © 2009 by Warren Porter
+  </table>
+</form>
+To see the statistics for a typical month on this page, click <a href=http://bellsouthpwp.net/w/b/wbport/chess_etc/counter.htm target=new>here</a>. 
+<script>
+if (document.referrer.search("devenezia") == -1)
+   document.write("<a href='http://home.comcast.net/~wporter211/site/?/page/Feedback/'")
+else
+   document.write("<a href='http://www.devenezia.com/round-robin/forum/YaBB.pl'");
+document.write(">Feedback or comments</a>");
+</script>
+<script>
+
+if (Date.parse(document.lastModified) != 0)
+  document.write('<p><hr><small><i>Last modified: '
+                 + document.lastModified
+                 + '</i></small><br>');
+</script>
+<!-- start counter code -->
+<script type="text/javascript">
+var referrer = escape(document.referrer);
+var width = screen.width;
+var height = screen.height;
+referrer = (referrer == '') ? '-' : referrer;
+width = (width == '') ? '-' : width;
+height = (height == '') ? '-' : height;
+var params = referrer + '/' + width + '/' + height;
+document.write('<a href="http://www.freecountersnow.com/a/login.php?alias=757fad3d395dbede23da3b6bdf589a415e7196b1"><img src="http://www.freecountersnow.com/gc/757fad3d395dbede23da3b6bdf589a415e7196b1/' + params + '" alt="Free Counters" style="border: 0px;"></a>');
+</script>
+<noscript>
+<img src="http://www.freecountersnow.com/gc/757fad3d395dbede23da3b6bdf589a415e7196b1/-/-/-" alt="Free Counter" style="border: 0px;" width="40" height="15">
+</noscript>
+<br>
+<a href="http://www.registereverywhere.com" style="font-size: 8pt;">Search
+Engine Placement</a>
+<!-- Do not remove this link or the counter will stop functioning within 48 hours. --><!-- end counter code -->
+
+</body>
